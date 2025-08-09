@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
+import { Profile } from './profile/profile';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, Login,Signup],
+  imports: [CommonModule, RouterOutlet, Login,Signup, Profile],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
@@ -15,7 +16,12 @@ export class App {
 
   
   title = 'App_1';
-  name = 'Roshan';
+  name: string = 'Roshan';
+  
+  data: string | number = 'string';
+  bool: string | boolean = true;
+  // to handle multiple datatype use any
+  Any: any = "false";
   // x: boolean = false;
 
   // // setXTrue() {
@@ -32,6 +38,22 @@ export class App {
   //   ['4', 'Ayush', '20', 'c']
   // ];
 
+  changehandler() {
+    alert("function called");
+    this.otherfunction();
+  }
 
+  otherfunction() {
+    console.log("another function.");
+  }
 
+  update_name() {
+    this.data = "15";
+    console.log("mouse is over");
+    
+    // this.bool = "boolean";
+  }
+  sum(a:number,b:number) {
+    console.log(a + b);
+  }
 }
