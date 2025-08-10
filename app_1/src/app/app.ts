@@ -4,11 +4,11 @@ import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { Profile } from './profile/profile';
-
+import { EventHandler } from './event-handler/event-handler';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, Login,Signup, Profile],
+  imports: [CommonModule, RouterOutlet, Login,Signup, Profile, EventHandler],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
