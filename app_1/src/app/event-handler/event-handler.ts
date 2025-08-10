@@ -20,9 +20,11 @@ export class EventHandler {
     this.bgColor = color;
   }
 
-handleinput(e: Event) {
-  console.log((e.target as HTMLInputElement).value);
-}
+  handleinput(e: Event) {
+    console.log(e.type);
+    // console.log((e.target as HTMLInputElement).value);
+    
+  }
 
 
 }
